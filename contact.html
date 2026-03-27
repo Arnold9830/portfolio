@@ -1,13 +1,13 @@
 <!-- Paste this into EVERY HTML file and customise the <title> and <main> -->
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="style.css"
+<link rel="stylesheet" href="style.css">
   <meta charset="UTF-8">
   <!-- REQUIRED for responsive design on mobile -->
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Portfolio of [Your Name] — Computing student at [University]">
-  <title>VIRGINIAH MULINGE | Portfolio</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="description" content="Portfolio of Arnold Ochieng — Food Science and Technology student at JKUAT">
+  <title>Arnold Ochieng | Portfolio</title>
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
@@ -16,7 +16,7 @@
 
   <header>
     <div class="container">
-      <a href="index.html" class="logo">VIRGINIAH MULINGE</a>
+      <a href="index.html" class="logo">Arnold Ochieng</a>
       <nav aria-label="Main navigation">
         <ul>
           <!-- Add class="active" to the current page's link -->
@@ -35,7 +35,7 @@
 
   <footer>
     <div class="container">
-      <p>&copy; <span id="year"></span> VIRGINIAH MULINGE — ICS 2215, Dept. of food science and technology</p>
+      <p>&copy; <span id="year"></span> Arnold Ochieng — ICS 2215, Dept. of Computing</p>
     </div>
   </footer>
   <script>document.getElementById('year').textContent = new Date().getFullYear();</script>
@@ -44,35 +44,54 @@
   <div class="container">
     <h2>Get In Touch</h2>
     <!-- action="#" keeps the form on the same page (no backend for this lab) -->
-    <form class="contact-form" action="#" method="POST" novalidate>
+    <section class="contact-section">
+  <div class="contact-form">
+    <form action="#" method="POST" enctype="multipart/form-data" novalidate>
 
+      <!-- Full Name -->
       <div class="form-group">
-        <label for="name">virginiah mulinge</label>
-        <input type="text" id="name" name="name"
-               placeholder="Jane Doe" required>
+        <label for="fullName">Full Name</label>
+        <input type="text" id="fullName" name="fullName" placeholder="xxxx xxxx xxxx" required>
       </div>
 
+      <!-- Email Address -->
       <div class="form-group">
         <label for="email">Email Address</label>
-        <input type="email" id="email" name="email" required>
+        <input type="email" id="email" name="email" placeholder="xxxxxx@gmail.com" required>
       </div>
 
+      <!-- Phone Number -->
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" placeholder="+254 7xxxxxxxx" required>
+      </div>
+
+      <!-- Subject -->
       <div class="form-group">
         <label for="subject">Subject</label>
-        <select id="subject" name="subject">
+        <select id="subject" name="subject" required>
           <option value="">Select a subject</option>
-          <option>Collaboration</option>
-          <option>Employment Opportunity</option>
-          <option>General Enquiry</option>
+          <option value="collaboration">Collaboration</option>
+          <option value="employment">Employment Opportunity</option>
+          <option value="general">General Enquiry</option>
         </select>
       </div>
 
+      <!-- Message -->
       <div class="form-group">
-        <label for="msg">Message</label>
-        <textarea id="msg" name="message" rows="5" required></textarea>
+        <label for="message">Message</label>
+        <textarea id="message" name="message" rows="5" placeholder="Type your message here..." required></textarea>
       </div>
 
+      <!-- File Upload -->
+      <div class="form-group">
+        <label for="fileUpload">Attach a File (optional)</label>
+        <input type="file" id="fileUpload" name="fileUpload" accept=".pdf,.doc,.docx,.jpg,.png">
+      </div>
+
+      <!-- Submit Button -->
       <button type="submit" class="btn">Send Message</button>
+
     </form>
   </div>
 </section>
